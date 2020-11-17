@@ -21,3 +21,5 @@ provider :shopify,
     strategy.options[:per_user_permissions] = strategy.session[:user_tokens]
   }
 end
+
+OmniAuth.config.logger = Rails.logger if Rails.env.development?
